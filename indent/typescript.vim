@@ -17,6 +17,8 @@ setlocal nosmartindent
 setlocal indentexpr=GetTypescriptIndent()
 setlocal indentkeys=0{,0},0),0],0\,,!^F,o,O,e
 
+let b:undo_indent = "setlocal indentexpr< indentkeys<"
+
 " Only define the function once.
 if exists("*GetTypescriptIndent")
   finish
